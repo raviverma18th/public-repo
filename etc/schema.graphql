@@ -1,0 +1,45 @@
+type Mutation {
+    registerUser(input: RegisterUserInput): RegisterUserOutput @resolver(class: "Eighteentech\\VirtualFoot\\GraphQl\\Model\\Resolver\\RegisterUser")
+}
+
+type Query {
+    getRecommendations(input: GetRecommendationsInput): [Recommendation] @resolver(class: "Eighteentech\\VirtualFoot\\GraphQl\\Model\\Resolver\\GetRecommendations")
+}
+
+input RegisterUserInput {
+    uuid: String!
+    region: String!
+    country: String!
+    site: String!
+    gender: String!
+    name: String!
+    birthday: String!
+}
+
+type RegisterUserOutput {
+    status: String!
+    message: String
+    scanner_url: String
+}
+
+input GetRecommendationsInput {
+    non_oneasics_id: String!
+    region: String!
+    country: String!
+    site: String!
+    language: String!
+    style: String!
+    color: String!
+    per_page: String!
+    page: String!
+}
+
+type Recommendation {
+    uuid: String!
+    region: String!
+    country: String!
+    site: String!
+    gender: String!
+    name: String!
+    birthday: String!
+}

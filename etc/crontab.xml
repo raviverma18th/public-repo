@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Eighteentech_VirtualFoot Cron Configuration
+ * 
+ * @category  Eighteentech
+ * @package   Eighteentech_VirtualFoot
+ * @author    Eighteentech
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="eighteentech_virtualfoot_generate_token" instance="Eighteentech\VirtualFoot\Cron\GenerateToken" method="execute">
+            <schedule>0 0 * * *</schedule>
+        </job>
+        <job name="eighteentech_virtualfoot_sync_products" instance="Eighteentech\VirtualFoot\Cron\SyncProducts" method="execute">
+            <schedule>0 0 * * *</schedule>
+        </job>
+    </group>
+</config>

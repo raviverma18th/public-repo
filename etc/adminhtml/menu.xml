@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Eighteen" title="Eighteen" module="Eighteentech_VirtualFoot" sortOrder="10" resource="Eighteentech_VirtualFoot::config"/>
+        <add id="Eighteen_VirtualFoot" title="Virtual Foot" module="Eighteentech_VirtualFoot" sortOrder="20" parent="Eighteen" resource="Eighteentech_VirtualFoot::config"/>
+        <add id="Eighteen_VirtualFoot_Config" title="Config" module="Eighteentech_VirtualFoot" sortOrder="30" parent="Eighteen_VirtualFoot" action="adminhtml/system_config/edit/section/virtualfoot" resource="Eighteentech_VirtualFoot::config"/>
+    </menu>
+</config>
